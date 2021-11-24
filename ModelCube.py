@@ -11,7 +11,7 @@ validation_data_dir = 'test'
 nb_train_samples =100
 nb_validation_samples = 20
 epochs = 10
-batch_size = 16
+batch_size = 10
 
 
 if K.image_data_format() == 'channels_first':
@@ -21,17 +21,17 @@ else:
     
 
 model = Sequential()
-model.add(Conv2D(32, (2, 2), input_shape=input_shape))
+model.add(Conv2D(32, (8, 8), input_shape=input_shape))
 model.add(Activation('relu'))
-model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(MaxPooling2D(pool_size=(8, 8)))
  
-model.add(Conv2D(32, (2, 2)))
+model.add(Conv2D(32, (8, 8)))
 model.add(Activation('relu'))
-model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(MaxPooling2D(pool_size=(8, 8)))
  
-model.add(Conv2D(64, (2, 2)))
+model.add(Conv2D(64, (8, 8)))
 model.add(Activation('relu'))
-model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(MaxPooling2D(pool_size=(8, 8)))
  
 model.add(Flatten())
 model.add(Dense(64))
