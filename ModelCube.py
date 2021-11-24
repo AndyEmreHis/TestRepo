@@ -23,15 +23,15 @@ else:
 model = Sequential()
 model.add(Conv2D(32, (8, 8), input_shape=input_shape))
 model.add(Activation('relu'))
-model.add(MaxPooling2D(pool_size=(8, 8)))
+model.add(MaxPooling2D(pool_size=(2, 2)))
  
 model.add(Conv2D(32, (8, 8)))
 model.add(Activation('relu'))
-model.add(MaxPooling2D(pool_size=(8, 8)))
+model.add(MaxPooling2D(pool_size=(2, 2)))
  
 model.add(Conv2D(64, (8, 8)))
 model.add(Activation('relu'))
-model.add(MaxPooling2D(pool_size=(8, 8)))
+model.add(MaxPooling2D(pool_size=(2, 2)))
  
 model.add(Flatten())
 model.add(Dense(64))
