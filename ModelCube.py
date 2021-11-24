@@ -21,20 +21,20 @@ else:
     
 
 model = Sequential()
-model.add(Conv2D(32, (8, 8), input_shape=input_shape))
+model.add(Conv2D(16, (9, 9), input_shape=input_shape))
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
  
-model.add(Conv2D(32, (8, 8)))
+model.add(Conv2D(16, (9, 9)))
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
  
-model.add(Conv2D(64, (8, 8)))
+model.add(Conv2D(32, (9, 9)))
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
  
 model.add(Flatten())
-model.add(Dense(64))
+model.add(Dense(32))
 model.add(Activation('relu'))
 model.add(Dropout(0.5))
 model.add(Dense(1))
